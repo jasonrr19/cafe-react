@@ -10,19 +10,22 @@ import "./Cafe.css";
 
 import React from 'react';
 
-const Cafe = ({ cafe }) => {
-  const cafeData = {
-    picture: "https://laptopfriendly.co/images/places/tokyo/ddsk-saigon-kitchen/ddsk-saigon-kitchen--tokyo.jpg",
-    title: "DDSK SAIGON KITCHEN",
-    address: "ss, 135-0061, Tokyo",
-    criteria: ["Power sockets", "Quiet"]
+const Cafe = ({ cafeData }) => {
 
-  };
+  // const cafeData = {
+  //   picture: "https://laptopfriendly.co/images/places/tokyo/ddsk-saigon-kitchen/ddsk-saigon-kitchen--tokyo.jpg",
+  //   title: "DDSK SAIGON KITCHEN",
+  //   address: "ss, 135-0061, Tokyo",
+  //   criteria: ["Power sockets", "Quiet"]
 
-  const gmapsUrl = '';
+  // };
+
+
+
+  const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${cafeData.address}`;
   return (
     <div className="cafe-card">
-      <img src={cafeData.picture} alt={cafe.title} />
+      <img src={cafeData.picture} alt={cafeData.title} />
       <div>
         <div>
           <h5>{cafeData.title}</h5>
